@@ -1,0 +1,21 @@
+.title{
+  font-size: 44rpx;
+  color: #333333;
+  padding: 0 22rpx;
+  text-align: justify;
+}
+.author{
+  margin-top: 30rpx;
+  font-size: 32rpx;
+  color: #999999;
+  letter-spacing: 2rpx;
+  padding: 0 22rpx;
+}
+.des{
+   margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #555555;
+  text-align: justify;
+  line-height: 40rpx;
+  padding: 0 22rpx;
+}

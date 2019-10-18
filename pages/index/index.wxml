@@ -1,13 +1,99 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<wxs src="./banner.wxs" module="banner" />
+<view class='box'>
+   <view class='banner'>
+      <swiper
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}"
+        interval="{{interval}}"
+        duration="{{duration}}"
+        indicator-dots="{{true}}"
+        indicator-active-color="#7F0F0D"
+        indicator-color="#FFFFFF"
+      >
+        <block wx:for="{{bannerData}}" wx:for-item="item" wx:key="{{index}}">
+          <swiper-item>
+            <image class='bannerImg' src="{{item.imgUrl}}" class="slide-image" />
+          </swiper-item>
+        </block>
+        <!-- <block >
+          <swiper-item>
+            <image class='bannerImg' src="../../images/index/zhibo@2x.png" class="slide-image" />
+          </swiper-item>
+        </block> -->
+      </swiper>
+   </view>
+   <view class='list'>
+     <view class='list-top'>
+     <view class='item' wx:for="{{kindsData}}" wx:key='{{list.id}}' wx:if="{{index<3}}">
+        <view class='item-content'>
+          <navigator url="{{banner.shouye(item.id)}}">
+            <image src='{{item.imgUrl}}'></image>
+            <text class='des'>{{item.name}}</text>
+          </navigator>
+        </view>
+      </view>
+     </view>
+     <view class='list-bottom'>
+      <view class='item' wx:for="{{kindsData}}" wx:key='{{list.id}}' wx:if="{{index>2}}">
+        <view class='item-content'>
+          <navigator url="{{banner.shouye(item.id)}}">
+            <image src='{{item.imgUrl}}'></image>
+            <text class='des'>{{item.name}}</text>
+          </navigator>
+        </view>
+      </view>
+     </view>
+   </view>
+   <view class='video-box'>
+     <view class='item' wx:for="{{list}}" wx:key='{{list.id}}'>
+     <navigator wx:if="{{item.typeId == 100}}" url='../live/live??already={{item.already}}&videUrl={{item.videUrl}}&title={{item.title}}'>
+        <image src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+        <view class='item-title'>
+          <view class='one'>{{item.title}}</view>
+          <text class='two' >直播</text>
+          <view class='time'>{{item.createTime}}</view>
+        </view>
+      </navigator>
+      <navigator wx:if="{{item.typeId == 101}}" url='../videoDetail/videoDetail?id={{item.id}}'>
+        <image src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+        <view class='item-title'>
+          <view class='one'>{{item.title}}</view>
+          <text class='two' >视频</text>
+          <view class='time'>{{item.createTime}}</view>
+        </view>
+      </navigator>
+      <navigator wx:if="{{item.typeId == 103}}" url='../albumDetail/albumDetail?id={{item.typeIdTwo}}'>
+        <image src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+        <view class='item-title'>
+          <view class='one'>{{item.title}}</view>
+          <text class='two' >图集</text>
+          <view class='time'>{{item.createTime}}</view>
+        </view>
+      </navigator>
+      <navigator wx:if="{{item.typeId == 104}}" url='../specialDetail/specialDetail?id={{item.id}}'>
+        <image src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+        <view class='item-title'>
+          <view class='one'>{{item.title}}</view>
+          <text class='two' >精选</text>
+          <view class='time'>{{item.createTime}}</view>
+        </view>
+      </navigator>
+      <navigator wx:if="{{item.typeId == 105}}" url='../readDetail/readDetail?id={{item.id}}'>
+        <image src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+        <view class='item-title'>
+          <view class='one'>{{item.title}}</view>
+          <text class='two' >专题</text>
+          <view class='time'>{{item.createTime}}</view>
+        </view>
+      </navigator>
+      <navigator wx:if="{{item.typeId == 106}}" url='../audioDetail/audioDetail?id={{item.id}}'>
+        <image src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+        <view class='item-title'>
+          <view class='one'>{{item.title}}</view>
+          <text class='two' >电台</text>
+          <view class='time'>{{item.createTime}}</view>
+        </view>
+      </navigator>
+     </view>
+   </view>
 </view>

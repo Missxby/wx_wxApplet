@@ -1,0 +1,108 @@
+<view class='box'>
+  <view class='content'>
+    <view class='content-item' wx:for="{{listData}}" wx:key="{{index}}">
+      <navigator wx:if="{{item.typeId == 100}}" url='../live/live?already={{item.already}}&videUrl={{item.videUrl}}&title={{item.title}}'>
+        <view class='right'>
+          <image class='bannerImg'  src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+          <view class='changeState'>
+            <image></image>
+          </view>
+        </view>
+        <view class='left'>
+          <view class='title'>
+            {{item.title}}
+          </view>
+          <view class='viewLabel'>
+            <view class='viewLabel-left'>{{name}}</view>
+            <view class='viewLabel-right'>{{item.createTime}}</view>
+          </view>
+        </view>
+      </navigator>
+      <navigator wx:if="{{item.typeId == 101}}" url='../videoDetail/videoDetail?id={{item.id}}'>
+        <view class='right'>
+          <image class='bannerImg'  src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+          <view class='changeState'>
+            <image></image>
+          </view>
+        </view>
+        <view class='left'>
+          <view class='title'>
+            {{item.title}}
+          </view>
+          <view class='viewLabel'>
+            <view class='viewLabel-left'>{{name}}</view>
+            <view class='viewLabel-right'>{{item.createTime}}</view>
+          </view>
+        </view>
+      </navigator>
+      <navigator wx:if="{{item.typeId == 103}}" url='../albumDetail/albumDetail?id={{item.typeIdTwo}}'>
+        <view class='right'>
+          <image class='bannerImg'  src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+          <view class='changeState'>
+            <image></image>
+          </view>
+        </view>
+        <view class='left'>
+          <view class='title'>
+            {{item.title}}
+          </view>
+          <view class='viewLabel'>
+            <view class='viewLabel-left'>{{name}}</view>
+            <view class='viewLabel-right'>{{item.createTime}}</view>
+          </view>
+        </view>
+      </navigator>
+      <navigator wx:if="{{item.typeId == 104}}" url='../specialDetail/specialDetail?id={{item.id}}'>
+        <view class='right'>
+          <image class='bannerImg'  src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+          <view class='changeState'>
+            <image></image>
+          </view>
+        </view>
+        <view class='left'>
+          <view class='title'>
+            {{item.title}}
+          </view>
+          <view class='viewLabel'>
+            <view class='viewLabel-left'>{{name}}</view>
+            <view class='viewLabel-right'>{{item.createTime}}</view>
+          </view>
+        </view>
+      </navigator>
+      <navigator wx:if="{{item.typeId == 105}}" url='../readDetail/readDetail?id={{item.id}}'>
+        <view class='right'>
+          <image class='bannerImg'  src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+          <view class='changeState'>
+            <image></image>
+          </view>
+        </view>
+        <view class='left'>
+          <view class='title'>
+            {{item.title}}
+          </view>
+          <view class='viewLabel'>
+            <view class='viewLabel-left'>{{name}}</view>
+            <view class='viewLabel-right'>{{item.createTime}}</view>
+          </view>
+        </view>
+      </navigator>
+      <navigator wx:if="{{item.typeId == 106}}" url='../audioDetail/audioDetail?id={{item.id}}'>
+        <view class='right'>
+          <image class='bannerImg'  src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+          <view class='changeState'>
+            <image></image>
+          </view>
+        </view>
+        <view class='left'>
+          <view class='title'>
+            {{item.title}}
+          </view>
+          <view class='viewLabel'>
+            <view class='viewLabel-left'>{{name}}</view>
+            <view class='viewLabel-right'>{{item.createTime}}</view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

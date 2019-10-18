@@ -1,0 +1,12 @@
+<import src="../../wxParse/wxParse.wxml"/> 
+<view>
+ <view class='title'>
+  {{data.title}}
+ </view>
+ <view class='author'>
+  作者：王希
+ </view>
+ <view class='des'>
+   <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+ </view>
+</view>

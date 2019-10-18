@@ -1,0 +1,30 @@
+<view class="box">
+  <view class='list'>
+    <view class='item' wx:for="{{data}}" wx:key="{{index}}">
+      <view class='title'>
+        {{item.title}}
+      </view>
+      <view class='des'>
+        {{item.title}}
+      </view>
+      <view class='time'>
+        {{item.createTime}}
+      </view>
+      <view class='box'>
+        <image src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+      </view>
+      <view class='btns'>
+        <view class='left'>
+          <navigator url='../readDetail/readDetail?id={{item.id}}'>
+          进入专题
+          </navigator>
+        </view>
+        <view class='right'>
+          <button open-type="share">
+           <image src='../../images/audio/fenxiang.png'></image>
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

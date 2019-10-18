@@ -1,0 +1,149 @@
+#myVideo{
+  width: 100%;
+  height: 420rpx;
+}
+.state-box{
+  padding: 20rpx;
+  overflow: hidden;
+  background: white;
+}
+.messsage{
+  position: relative;
+}
+.messsage image{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32rpx;
+  height: 32rpx;
+}
+.messsage .des{
+  padding-left: 40rpx;
+  font-size: 24rpx;
+  color: #333333;
+}
+.jiemu{
+  padding-top: 10rpx;
+}
+.jiemu-left{
+  float: left;
+  font-size: 28rpx;
+  color: #FF5D24;
+}
+.jiemu-right{
+  float: right;
+}
+.jiemu-right .share{
+  float: left;
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 30rpx;
+}
+.share image{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.jiemu-right{
+  position: relative;
+}
+.jiemu-right .jiemu-list{
+  position: relative;
+  float: left;
+  padding-right: 38rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+.jiemu-list image{
+  position: absolute;
+  right: 0;
+  top: 6rpx;
+  width: 28rpx;
+  height: 28rpx;
+}
+.content{
+  margin-top: 20rpx;
+  background: white;
+  overflow: hidden;
+}
+.content-item{
+  float: left;
+  width: 33.33%;
+  height: 168rpx;
+  padding-top: 40rpx;
+  border-bottom: 1rpx solid #ECECEC;
+  border-right: 1rpx solid #ECECEC;
+  box-sizing: border-box;
+}
+.content-item image{
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+  margin: auto;
+}
+.box{
+  min-height: 100vh;
+}
+.content-item .title{
+  padding-top: 10rpx;
+  font-size: 26rpx;
+  color: #333333;
+  text-align: center
+}
+.list .header{
+  font-size: 26rpx;
+  color: #333333;
+  padding: 20rpx 0;
+  padding-left: 30rpx;
+  overflow: hidden;
+}
+.list .list-item{
+
+  font-size: 26rpx;
+  color: #333333;
+  padding: 20rpx 0;
+  padding-left: 30rpx;
+  background: white;
+  overflow: hidden;
+  border-bottom: 1rpx solid #ECECEC;
+}
+button::after{
+  border:none;
+}
+button{
+  position: relative;
+  border:none;
+  padding: 0;
+  padding-left:0;
+  padding-right:0;
+  box-sizing:border-box;
+  background: none;
+  overflow: auto;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 0;
+}
+.list .bgActive {
+  background: #ECECEC;
+}
+.itemActive view{
+  color: #FF5D24;
+}
+.list .one{
+  width: 20%;
+  float: left;
+  text-align: center;
+}
+.list .two{
+  width: 20%;
+  float: left;
+  text-align: center;
+}
+.list .three{
+  width: 60%;
+  float: left;
+  text-align: center;
+}
+.content .contenActive{
+  background:#ECECEC;
+}

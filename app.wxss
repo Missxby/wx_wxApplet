@@ -1,4 +1,5 @@
 /**app.wxss**/
+@import "/wxParse/wxParse.wxss";
 .container {
   height: 100%;
   display: flex;
@@ -8,3 +9,57 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+image {
+  width: 100%;
+  height: auto;
+}
+.box{
+  background: #F3F3F3;
+}
+/* 刷选 */
+.kinds{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: left;
+  box-sizing: border-box;
+  background: white;
+  white-space:nowrap;
+  overflow: auto;
+  z-index: 111;
+}
+.kinds .item{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin: 0 25rpx;
+  padding-bottom: 18rpx;
+  color: #333333;
+}
+::-webkit-scrollbar {
+ height: 2rpx;
+}
+.kinds .active{
+  color: #7F0F0D;
+}
+.banner{
+  background: white;
+}
+.xian{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom:0;
+  width: 72rpx;
+  height: 6rpx;
+  background: #7F0F0D;
+  border-radius: 4rpx;
+  display: none;
+}
+.show{
+  display: block;
+}

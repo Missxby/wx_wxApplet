@@ -1,0 +1,41 @@
+var urlCharge = function (id, paremsId) {
+  if (id == '100') {
+    return '../live/live'
+  }
+  if (id == '101') {
+    return '../videoDetail/videoDetail?id=' + paremsId
+  }
+  if (id == '103') {
+    return '../albumDetail/albumDetail?id=' + paremsId
+  }
+  if (id == '104') {
+    return '../specialDetail/specialDetail?id=' + paremsId
+  }
+  if (id == '105') {
+    return '../readDetail/readDetail?id=' + paremsId
+  }
+  if (id == '106') {
+    return '../audioDetail/audioDetail?id=' + paremsId
+  }
+}
+var shouye = function (id) {
+  if (id == '100') {
+    return '../live/live'
+  }
+  if (id == '101') {
+    return '../videos/videos'
+  }
+  if (id == '103') {
+    return '../album/album'
+  }
+  if (id == '104') {
+    return '../concentration/concentration'
+  }
+  if (id == '105') {
+    return '../subject/subject'
+  }
+  if (id == '106') {
+    return '../radioStation/radioStation'
+  }
+}
+module.exports = { urlCharge: urlCharge, shouye: shouye }

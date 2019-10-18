@@ -1,0 +1,32 @@
+<view class='box'>
+  <view class='head'>
+    <view class='head-left'>
+      <view class='choose-item' bindtap='changeState' data-type="1">
+        <view>{{title}}</view>
+        <image wx:if="{{!active1}}" src='../../images/jingxuan/xiala.png'></image>
+        <image wx:if="{{active1}}" src='../../images/jingxuan/shangla.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='content-item' wx:for="{{listData}}" wx:key="{{index}}">
+      <navigator url='../specialDetail/specialDetail?id={{item.id}}'>
+        <view class='item-title' >{{item.title}}</view>
+        <image  src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+        <view class='des'>
+          <view class='left'>阅读全文</view>
+          <view class='right'>{{item.createTime}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class='lanmu-content' wx:if="{{active1}}">
+    <view class='list'>
+      <view class='item' wx:for="{{kinds}}" wx:key="{{index}}" bindtap='changeLabel' data-id="{{item.id}}" data-name="{{item.name}}">
+        <view>{{item.name}}</view>
+        <view class='cover'></view>
+      </view>
+    </view>
+    <view class='more'>正在努力加载更多内容……</view>
+  </view>
+</view>

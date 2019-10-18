@@ -1,0 +1,25 @@
+<!--pages/choiceness/choiceness.wxml-->
+<view class="container">
+  <!-- tab栏 -->
+  <view class="choiceness-header">
+    <view class="header-tab">
+      <view class="tab-name" bindtap="change" data-num="1">栏目</view>
+      <image class="tab-img" bindtap="change" data-num="1" src="{{tabBackgroundOne?'../../images/choiceness/xiala1.png':'../../images/choiceness/xiala2.png'}}"></image>
+    </view>
+    <view class="header-tab">
+      <view class="tab-name {{tabBackground?'active':''}}" bindtap="change" data-num="2">标签</view>
+      <image class="tab-img" bindtap="change" data-num="2" src="{{tabBackgroundTwo?'../../images/choiceness/xiala1.png':'../../images/choiceness/xiala2.png'}}"></image>
+    </view>
+  </view>
+  <!-- 标签下的列表 -->
+  <view class="tag-list">
+    <navigator class="tag-gonext">
+      <text class="tag-title">什么是最大的善? 改过!</text>
+      <image src="" class="tag-img"></image>
+      <view class="tag-bottom">
+        <text class="tag-read">阅读全文</text>
+        <text class="tag-time">2009-05-04</text>
+      </view>
+    </navigator>
+  </view>
+</view>

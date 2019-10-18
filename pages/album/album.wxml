@@ -1,0 +1,51 @@
+<wxs src="../index/banner.wxs" module="banner" />
+<view class='box'>
+  <view class='kinds'>
+    <view class="item {{index==active?'active':''}}" wx:for="{{kinds}}" wx:key="{{index}}" data-index="{{index}}" bindtap='chooseItem' data-id="{{item.id}}">
+    <text>{{item.name}}</text>
+    <text  class="xian {{index==active?'show':''}}"></text>
+    </view>
+  </view>
+  <view class='banner'>
+      <swiper
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}"
+        interval="{{interval}}"
+        duration="{{duration}}"
+        current="{{current}}"
+        indicator-active-color="#7F0F0D"
+        indicator-color="#FFFFFF"
+      >
+        <block wx:for="{{bannerList}}" wx:key='{{index}}'>
+          <swiper-item>
+            <view class='banner-title'>
+             <view class='middle'>
+              <text class='text'>{{item.title}}</text>
+              <view class='left-dian'></view>
+              <view class='right-dian'></view>
+             </view>
+            </view>
+            <navigator url="{{banner.urlCharge(item.typeId, item.typeIdTwo)}}">
+            <image class='bannerImg' src="{{item.imgUrl}}" class="slide-image" />
+            </navigator>
+            <view class='picture-number'>
+             <text>共{{bannerList.length}}张</text>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+   </view>
+   <view class='content'>
+    <view class='video-box'>
+      <view class='item' wx:for="{{listData}}" wx:key="{{index}}">
+        <navigator url='../albumDetail/albumDetail?id={{item.typeIdTwo}}'>
+          <image class='one-img' src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+          <view class='item-title'>
+            <text class='one'>{{item.title}}</text>
+            <text class='two'>{{item.createTime}}</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+   </view>
+</view>

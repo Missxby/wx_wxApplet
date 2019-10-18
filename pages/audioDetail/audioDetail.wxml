@@ -1,0 +1,46 @@
+<view class='box'>
+  <image class='bannerImg' src='{{content.imgUrl}}'></image>
+  <view class='audio-content'>
+    <view class='audio-title'>
+      <view class='one'>
+        {{content.name}}
+      </view>
+      <view class='two' wx-if="{{content.des}}">
+        {{content.des}}
+      </view>
+    </view>
+    <view class="control-process">
+        <text class="current-process">{{currentTime}}</text>
+        <slider class="slider" 
+            bindchange="sliderChange" 
+            bindtouchstart='changeState'
+            min="0" 
+            block-size="10" 
+            max="{{slider_max}}" 
+            activeColor="#2EC57C;" 
+            backgroundColor="#CCCCCC" 
+            value="{{slider_value}}"
+        />
+        <text class="total-process">{{totalTime}}</text>
+    </view>
+    <!-- <audio style='width:400rpx;height:30rpx;' id='myAudio' src='../../images/song.mp3' controls="true" bindtimeupdate="getProgress"></audio> -->
+  </view>
+  <view class='audioFunction'>
+    <view class='isLoop' bindtap='changLoopState'>
+      <image wx:if="{{!isLoop}}" src='../../images/audio/loop1.png'></image>
+      <image wx:if="{{isLoop}}" src='../../images/audio/loop2.png'></image>
+    </view>
+    <view class='audioFunction-play'>
+      <view class='audioFunction-play-left'>
+        <image src='../../images/audio/prev.png' bindtap='playPre'></image>
+      </view>
+      <view class='audioFunction-play-middle' bindtap='changeAudio'>
+        <image wx:if="{{active == 0}}" src='../../images/audio/play.png'></image>
+        <image wx:if="{{active == 1}}" src='../../images/audio/pause.png'></image>
+      </view>
+      <view class='audioFunction-play-right'  bindtap='playNext'>
+        <image src='../../images/audio/last.png'></image>
+      </view>
+    </view>
+  </view>
+</view>

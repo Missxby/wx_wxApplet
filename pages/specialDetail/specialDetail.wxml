@@ -1,0 +1,16 @@
+<!--pages/specialDetail /specialDetail.wxml-->
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class='content'>
+  <view class='title'>
+    {{data.title}}
+  </view>
+  <view class='label'>
+    {{data.baseName}}
+  </view>
+  <view class='imgBox'>
+    <image src='{{data.imgUrl}}'></image>
+  </view>
+  <view class='des'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+</view>

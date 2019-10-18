@@ -1,0 +1,100 @@
+.box{
+  padding-top: 70rpx;
+}
+.banner{
+  padding-top: 20rpx;
+}
+swiper{
+  height:350rpx;
+}
+.banner image{
+  display: block;
+  height: 280rpx;
+  width: 98%;
+  margin: auto;
+}
+.banner-content{
+  display: flex;
+  width: 98%;
+  margin: auto;
+  padding: 20rpx 0;
+}
+.banner-content .left{
+  flex: 1;
+  text-align: left;
+  font-size: 26rpx;
+  color: #333333;
+}
+.banner-content .right{
+  flex: 1;
+  padding-right: 22rpx;
+  text-align: right;
+  font-size: 22rpx;
+  color: #999999;
+  box-sizing: border-box;
+}
+.content{
+  margin-top: 20rpx;
+  background: white;
+}
+.video-box{
+  width: 100%;
+  background: white;
+  overflow: auto;
+}
+.video-box .item:nth-child(odd){
+  position: relative;
+  width: 50%;
+  float: left;
+  padding-left: 24rpx;
+  padding-right: 12rpx;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+.video-box .item:nth-child(even){
+  position: relative;
+  width: 50%;
+  float: left;
+  padding-left: 12rpx;
+  padding-right: 24rpx;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+.video-box .one-img{
+  display: block;
+  width: 100%;
+  height: 240rpx;
+}
+.video-box .two-img{
+  position: absolute;
+  left: 0;
+  top:110rpx;
+  right: 0;
+  margin: auto;
+  width: 52rpx;
+  height: 52rpx;
+}
+.item-title{
+  margin-top: 16rpx;
+  font-size: 28rpx;
+  color: #333333;
+  text-align: justify;
+}
+.item-title .one{
+  display: block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  font-size: 28rpx;
+  color: #333333;
+}
+.item-title .two{
+  font-size: 22rpx;
+  color: #999999;
+}
+.content-title{
+  font-size: 34rpx;
+  color: #333333;
+  padding-top: 20rpx;
+  padding-left: 42rpx;
+}

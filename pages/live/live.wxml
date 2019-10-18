@@ -1,0 +1,59 @@
+<view class='box'>
+  <video src='{{videoSrc}}' id='myVideo' custom-cache="{{false}}">>
+  </video>
+  <view class='state-box'>
+    <view class='messsage'>
+      <image src='../../images/live/message.png'></image>
+      <view class='des'>{{name}}</view>
+    </view>
+    <view class='jiemu'>
+      <view class='jiemu-left'>
+        <view wx:if="{{state == 1}}">
+          重播
+        </view>
+        <view wx:if="{{state == 2}}">
+          直播中
+        </view>
+      </view>
+      <view class='jiemu-right'>
+        <view class='share'>
+          <button open-type="share">
+            <image src='../../images/audio/fenxiang.png'></image>
+          </button>
+        </view>
+        <view class='jiemu-list'>
+          节目列表
+          <image wx:if="{{isShow==1}}" src='../../images/live/list.png'></image>
+          <image bindtap='closeList' wx:if="{{isShow==2}}" src='../../images/live/delete.jpg'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='content'>
+    <view class="content-item {{index==contenActive?'contenActive':''}}" wx:for="{{kinds}}" wx:key="{{index}}" data-index="{{index}}" data-id="{{item.id}}"  bindtap='chooseItem'>
+      <image src='{{item.imgUrl}}'></image>
+      <view class='title'>{{item.name}}</view>
+    </view>
+  </view>
+  <view class='list' wx:if="{{isShow==2}}">
+    <view class='header'>
+      <view class='one'>时间</view>
+      <view class='two'>类型</view>
+      <view class='three'>节目名称</view>
+    </view>
+    <view wx:if="{{isShow==2}}" bindtap='chooseVideo' class="list-item {{index==itemActive?'itemActive':''}} {{item.already==2?'bgActive':''}}" wx:for="{{data}}" wx:key="{{index}}" data-url="{{item.videUrl}}" data-title="{{item.title}}" data-already="{{item.already}}" data-index="{{index}}">
+      <view class='one'>
+        {{item.startTime}}
+      </view>
+      <view class='two'>
+        <view wx:if="{{item.already == 1}}">
+          重播
+        </view>
+        <view wx:if="{{item.already == 2}}">
+          播出
+        </view>
+      </view>
+      <view class='three'>{{item.title}}</view>
+    </view>
+  </view>
+</view>

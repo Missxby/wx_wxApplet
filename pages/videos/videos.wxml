@@ -1,0 +1,51 @@
+<wxs src="../index/banner.wxs" module="banner" />
+<view class="box">
+ <view class='kinds'>
+  <view class="item {{index==active?'active':''}}" wx:for="{{kinds}}" wx:key="{{index}}" data-index="{{index}}" bindtap='chooseItem' data-id="{{item.id}}">
+   <text>{{item.name}}</text>
+   <text  class="xian {{index==active?'show':''}}"></text>
+  </view>
+ </view>
+ <view class='banner'>
+      <swiper
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}"
+        interval="{{interval}}"
+        duration="{{duration}}"
+        current="{{current}}"
+        indicator-active-color="#7F0F0D"
+        indicator-color="#FFFFFF"
+        previous-margin="40rpx"
+        next-margin="40rpx"
+      >
+        <block wx:for="{{bannerList}}" wx:key="{{item.id}}">
+          <swiper-item >
+            <navigator url="{{banner.urlCharge(item.typeId, item.id)}}">
+              <image class='bannerImg' src="{{item.imgUrl}}" class="slide-image" />
+              <view class='banner-content'>
+                <view class='left'>{{item.title}}</view>
+                <view class='right'>更新至40集</view>
+              </view>
+            </navigator>
+          </swiper-item>
+        </block>
+      </swiper>
+   </view>
+   <view class='content'>
+      <view class='content-title'>
+       大讲堂
+      </view>
+      <view class='video-box'>
+        <view class='item' wx:for="{{listData}}" wx:key="{{item.id}}">
+          <navigator url='../videoDetail/videoDetail?id={{item.id}}'>
+            <image class='one-img' src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+            <image class='two-img'src='../../images/videos/pause.png'></image>
+            <view class='item-title'>
+              <text class='one'>{{item.title}}</text>
+              <!-- <text class='two'>更新至23集</text> -->
+            </view>
+          </navigator>
+        </view>
+      </view>
+   </view>
+</view>

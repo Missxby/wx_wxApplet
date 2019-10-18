@@ -1,0 +1,71 @@
+/* pages/choiceness/choiceness.wxss */
+
+.choiceness-header {
+  background: #fff;
+  width: 100%;
+}
+
+.choiceness-header {
+  box-sizing: border-box;
+  display: flex;
+  height: 104rpx;
+  line-height: 104rpx;
+  margin-bottom: 20rpx;
+  padding: 32rpx 0;
+  width: 100%;
+}
+
+.header-tab {
+  align-items: center;
+  display: flex;
+  height: 40rpx;
+  justify-content: center;
+  width: 50%;
+}
+
+.header-tab:nth-child(odd) {
+  border-right: 2rpx solid#CCCCCC;
+}
+
+.tab-img {
+  height: 20rpx;
+  margin-left: 12rpx;
+  width: 28rpx;
+}
+
+.tag-list {
+  background: #fff;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  padding: 30rpx 24rpx 20rpx;
+  width: 100%;
+}
+
+.tag-gonext {
+  font-family: PingFangSC-Regular;
+  width: 100%;
+}
+
+.tag-title {
+  color: #333;
+  font-size: 34rpx;
+}
+
+.tag-img {
+  background: #ccc;
+  display: block;
+  height: 320rpx;
+  margin: 20rpx 0;
+  width: 702rpx;
+}
+
+.tag-bottom {
+  color: #999;
+  font-size: 12px;
+}
+.tag-read {
+  float: left;
+}
+.tag-time {
+  float: right;
+}

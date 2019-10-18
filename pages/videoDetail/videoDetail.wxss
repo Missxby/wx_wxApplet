@@ -1,0 +1,130 @@
+.video-box{
+  position: relative;
+  background: white;
+}
+.video-box video{
+  width: 100%;
+  height: 400rpx;
+}
+button::after{
+  border:none;
+}
+button{
+  position: relative;
+  border:none;
+  padding: 0;
+  padding-left:0;
+  padding-right:0;
+  box-sizing:border-box;
+  background: none;
+  overflow: auto;
+  border-radius: 0;
+}
+.back{
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+  left: 24rpx;
+  top: 14rpx;
+  /* opacity: 0.2; */
+  background: rgba(250, 250, 250, 0.2);
+  border-radius: 50%;
+}
+.share{
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+  right: 24rpx;
+  top: 14rpx;
+  /* opacity: 0.2; */
+  background: rgba(250, 250, 250, 0.2);
+  border-radius: 50%;
+}
+.video-box image{
+  width: 100%;
+  height: 100%;
+}
+.video-title{
+  padding: 0 24rpx;
+  padding-top: 30rpx;
+  font-size: 34rpx;
+  color: #333333;
+}
+.video-title .two{
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+.margin-l30{
+  margin-left: 30rpx;
+}
+.video-featrue{
+  display: flex;
+  margin-top: 40rpx;
+  padding: 0 24rpx;
+  padding-bottom: 44rpx;
+}
+.video-featrue .left{
+  flex: 1;
+}
+.video-featrue .right{
+  flex: 1;
+}
+.video-featrue .left text{
+  display: inline-block;
+  padding: 0 20rpx;
+  height: 60rpx;
+  font-size: 26rpx;
+  color: #7F0F0D;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #7F0F0D;
+}
+.video-featrue .right .one{
+   float: right;
+   width: 38rpx;
+   height: 38rpx;
+   font-size: 20rpx;
+   color: #7A7A7A;
+}
+.video-featrue .right .two{
+   width: 40rpx;
+   height: 38rpx;
+   font-size: 20rpx;
+   margin-left: 30rpx;
+   float: right;
+}
+.selections{
+  margin-top: 1px;
+  background: white;
+  
+}
+.selections .selections-title{
+  padding-top:  40rpx;
+  font-size: 32rpx;
+  color: #333333;
+  padding: 0 24rpx;
+}
+.selections-content{
+  /* padding-top: 100px; */
+  padding: 0 14rpx;
+  text-align: justify;
+}
+.selections-item{
+  display: inline-block;
+  width: 100rpx;
+  margin: 0 10rpx;
+  margin-top: 20rpx;
+  /* height: 100rpx; */
+  text-align: center;
+  line-height: 100rpx;
+  background: #F3F3F3;
+  border-radius: 16rpx;
+
+}
+.active-item{
+  background: #7F0F0D;
+  border-radius: 8rpx;
+  color: white;
+}

@@ -1,0 +1,19 @@
+<view class='box'>
+  <view class='mask'>
+    <view class='middle'>
+       <swiper
+          indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}"
+          interval="{{interval}}"
+          duration="{{duration}}"
+        >
+          <block wx:for="{{imgData}}" wx:key="{{key}}">
+            <swiper-item>
+              <image src="{{item.imgUrl}}" class="slide-image" width="355" height="150" />
+            </swiper-item>
+          </block>
+        </swiper>
+    </view>
+    
+  </view>
+</view>

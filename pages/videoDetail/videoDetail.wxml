@@ -1,0 +1,47 @@
+<view class='box'>
+  <view class='video-box'>
+    <video src='{{videoSrc}}' id="myVideo" custom-cache="{{false}}" enable-danmu  controls></video>
+    <cover-view class='back' bindtap='back'>
+      <cover-image src='../../images/videos/back.png'></cover-image>
+    </cover-view>
+    <cover-view class='share'>
+      <button open-type="share">
+       <cover-image src='../../images/videos/share.png'></cover-image>
+      </button>
+    </cover-view>
+    <view class='video-title'>
+      <view class='one'>
+        <text>{{detailData.tName}}</text>
+      </view>
+      <view class='two'>
+        <text>更新至{{detailData.title}}.</text>
+        <text class='margin-l30'>{{detailData.createTime}}</text>
+      </view>
+    </view>
+    <view class='video-featrue'>
+      <view class='left'>
+        <text>{{detailData.name}}</text>
+      </view>
+      <view class='right'>
+        <!-- <view class='two'>
+          <image src='../../images/videos/down.png'></image>
+          <text>缓存</text>
+        </view> -->
+        <!-- <view class='one'>
+          <image src='../../images/videos/shoucang.png'></image>
+          <text>收藏</text>
+        </view> -->
+      </view>
+    </view>
+  </view>
+  <view class='selections'>
+    <view class='selections-title'>
+      <text>选集</text>
+    </view>
+    <view class='selections-content'>
+      <view wx:key="{{index}}" wx:for="{{listData}}" class="selections-item {{active==index? 'active-item':''}}" data-index="{{index}}" bindtap='changeVideo'>
+        {{index + 1}}
+      </view>
+    </view>
+  </view>
+</view>

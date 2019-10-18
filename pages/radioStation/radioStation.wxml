@@ -1,0 +1,26 @@
+<view class='box'>
+  <view class='kinds'>
+    <view class="item {{index==active?'active':''}}" wx:for="{{kinds}}" wx:key="{{index}}" data-index="{{index}}" bindtap='chooseItem' data-id="{{item.id}}">
+    <text>{{item.name}}</text>
+    <text  class="xian {{index==active?'show':''}}"></text>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='item' wx:for="{{listData}}" wx:key="{{index}}">
+      <navigator url='../radioList/radioList?id={{item.id}}'>
+        <image src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+        <view class='title'>
+          <view class='left'>
+            {{item.title}}
+          </view>
+          <view class='right'>
+            {{item.createTime}}
+          </view>
+        </view>
+        <view class='des'>
+          {{item.describe}}
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

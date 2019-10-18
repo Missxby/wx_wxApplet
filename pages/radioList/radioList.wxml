@@ -1,0 +1,61 @@
+<view class='box'>
+  <view class='content'>
+    <view class='content-item' wx:for="{{listData}}" wx:key="{{index}}">
+      <view class='left'>
+        <navigator url='../audioDetail/audioDetail?id={{item.baseId}}&checkId={{item.id}}'>
+          <view class='title'>
+            {{item.title}}
+          </view>
+          <view class='timeDetail'>
+            <view class='timeDetail-left'>
+              <text class='one'>{{item.currentTime}}</text>
+              <text class='two'>|</text>
+              <text class='three'>{{item.duration}}</text>
+            </view>
+          </view>
+          <view class='viewLabel'>
+            <view class='viewLabel-left'>{{name}}</view>
+            <view class='viewLabel-right'>{{item.createTime}}</view>
+          </view>
+        </navigator>
+        <button open-type="share">
+          <image src='../../images/audio/fenxiang.png'></image>
+        </button>
+      </view>
+      <view class='right'>
+        <image class='bannerImg'  src="{{item.imgUrl?item.imgUrl:'../../images/common/moren.png'}}"></image>
+        <view class='changeState' data-index='{{index}}' bindtap='changeState'>
+          <image wx:if="{{item.flag}}" src='../../images/videos/pause.png'></image>
+          <image wx:if="{{!item.flag}}" src='../../images/videos/play.png'></image>
+        </view>
+      </view>
+    </view>
+    <!-- <view class='content-item'>
+      <view class='left'>
+        <view class='title'>
+          一颗老树竟换回了兄弟三个人的情谊
+        </view>
+        <view class='timeDetail'>
+          <view class='timeDetail-left'>
+            <text class='one'>00:01:15</text>
+            <text class='two'>|</text>
+            <text class='three'>00:01:15</text>
+          </view>
+          <view class='timeDetail-right'>
+            <image  src='../../images/audio/fenxiang.png'></image>
+          </view>
+        </view>
+        <view class='viewLabel'>
+          <view class='viewLabel-left'>德育故事</view>
+          <view class='viewLabel-right'>2018-12-06</view>
+        </view>
+      </view>
+      <view class='right'>
+        <image class='bannerImg'  src='../../images/index/login.jpg'></image>
+        <view class='changeState'>
+          <image></image>
+        </view>
+      </view>
+    </view> -->
+  </view>
+</view>
